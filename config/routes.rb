@@ -1,12 +1,7 @@
 ProductFeedApp::Application.routes.draw do
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
-                     controllers: {omniauth_callbacks: "omniauth_callbacks"}
-
-  # Facebook Authentication (#360)
-  # match 'auth/:provider/callback', to: 'sessions#create'
-  # match 'auth/failure', to: redirect('/')
-  # match 'signout', to: 'sessions#destroy', as: 'signout'
-
+                     controllers: {omniauth_callbacks: "omniauth_callbacks", :registrations => 'registrations'}
+                    
   resources :products
 
 
