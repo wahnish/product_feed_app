@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  # for creating a user w/products
+  has_many :products
+
   # Setup accessible (or protected) attributes for your model
   attr_accessor :password, :password_confirmation, :current_password
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :current_password
@@ -40,12 +43,12 @@ class User < ActiveRecord::Base
     super && provider.blank?
   end
 
-  def update_with_password(params, *options)
-    if encrypted_password.blank?
-      update_attributes(params, *options)
-    else
-      super
-    end
-  end
+  # def update_with_password(params, *options)
+  #   if encrypted_password.blank?
+  #     update_attributes(params, *options)
+  #   else
+  #     super
+  #   end
+  # end
   
 end

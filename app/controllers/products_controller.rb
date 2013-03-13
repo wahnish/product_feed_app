@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = current_user.products
+    # for creating a user w/products
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,7 +42,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(params[:product])
+    # for creating a user w/products
+    @product = current_user.products.new(params[:product])
 
     respond_to do |format|
       if @product.save
