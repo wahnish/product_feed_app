@@ -33,6 +33,12 @@ ProductFeedApp::Application.routes.draw do
   #     end
   #   end
 
+  resources :products do
+    collection do
+      get 'products'
+    end
+  end
+
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
