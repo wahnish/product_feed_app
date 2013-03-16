@@ -14,9 +14,10 @@
 		  		<%= link_to "Home", root_path %> |
 		  		<!-- <link_to 'Explore'> | -->
 		  		<!-- <link_to 'Sell'> | -->
+		  		<%= link_to 'Sell', new_product_path %> |
 		  		<!-- <link_to 'News'> | -->
 		  		<%= link_to 'Profile', products_path %> |
-		  		<%= link_to 'Edit Profile', edit_user_registration_path %> |
+		  		<!-- <link_to 'Edit Profile', edit_user_registration_path> | -->
 		  		<%= link_to "Logout", destroy_user_session_path, method: :delete %>
 
 			<% else %>

@@ -3,8 +3,10 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = current_user.products
     # for creating a user w/products
+    @products = current_user.products
+    # for showing current user profile info
+    @current_user = current_user
 
     respond_to do |format|
       format.html # index.html.erb
