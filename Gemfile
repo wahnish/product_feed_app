@@ -44,3 +44,6 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'certified'
+gem 'carrierwave'
+# gem 'rmagick'
+gem "mini_magick"

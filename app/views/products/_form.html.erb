@@ -1,4 +1,12 @@
-<%= form_for @product, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @product, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+  
+  <div class="control-group">
+    <%= f.label :image, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.file_field :image %>
+    </div>
+  </div>
+
   <div class="control-group">
     <%= f.label :title, :class => 'control-label' %>
     <div class="controls">
@@ -53,12 +61,12 @@
       <%= f.text_field :subcategory, :class => 'text_field' %>
     </div>
   </div>
-  <div class="control-group">
-    <%= f.label :images, :class => 'control-label' %>
+<!--   <div class="control-group">
+    <f.label :images, :class => 'control-label'>
     <div class="controls">
-      <%= f.text_field :images, :class => 'text_field' %>
+      < f.text_field :images, :class => 'text_field' >
     </div>
-  </div>
+  </div> -->
   <div class="control-group">
     <%= f.label :size, :class => 'control-label' %>
     <div class="controls">

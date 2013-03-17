@@ -3,7 +3,12 @@
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
 
+<!-- <= image_tag @product.image_url.to_s> -->
+<!-- <image_tag product.image_url(:thumb) if painting.image?> -->
+
 <dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:image) %>:</strong></dt>
+  <dd><%= image_tag @product.image_url.to_s %></dd>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @product.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
@@ -22,8 +27,8 @@
   <dd><%= @product.category %></dd>
   <dt><strong><%= model_class.human_attribute_name(:subcategory) %>:</strong></dt>
   <dd><%= @product.subcategory %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:images) %>:</strong></dt>
-  <dd><%= @product.images %></dd>
+  <!-- <dt><strong><model_class.human_attribute_name(:images)>:</strong></dt>
+  <dd><@product.images></dd> -->
   <dt><strong><%= model_class.human_attribute_name(:size) %>:</strong></dt>
   <dd><%= @product.size %></dd>
   <dt><strong><%= model_class.human_attribute_name(:options) %>:</strong></dt>

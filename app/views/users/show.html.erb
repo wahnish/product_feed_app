@@ -1,7 +1,6 @@
-<h1>Profile</h1>
 <%- model_class = Product -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+  <h1>My Profile</h1>
 </div>
 
 <!-- user profile info -->
@@ -29,16 +28,16 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:price) %></th>
-      <th><%= model_class.human_attribute_name(:qty) %></th>
+      <!-- <th><model_class.human_attribute_name(:qty)></th> -->
       <th><%= model_class.human_attribute_name(:blurb) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
-      <th><%= model_class.human_attribute_name(:weight) %></th>
-      <th><%= model_class.human_attribute_name(:shipping_weight) %></th>
-      <th><%= model_class.human_attribute_name(:category) %></th>
-      <th><%= model_class.human_attribute_name(:subcategory) %></th>
-      <th><%= model_class.human_attribute_name(:images) %></th>
-      <th><%= model_class.human_attribute_name(:size) %></th>
-      <th><%= model_class.human_attribute_name(:options) %></th>
+      <!-- <th><model_class.human_attribute_name(:description)></th> -->
+      <!-- <th><model_class.human_attribute_name(:weight)></th> -->
+      <!-- <th><model_class.human_attribute_name(:shipping_weight)></th> -->
+      <!-- <th><model_class.human_attribute_name(:category)></th> -->
+      <!-- <th><model_class.human_attribute_name(:subcategory)></th> -->
+      <th><%= model_class.human_attribute_name(:image) %></th>
+      <!-- <th><model_class.human_attribute_name(:size)></th> -->
+      <!-- <th><model_class.human_attribute_name(:options)></th> -->
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -49,16 +48,17 @@
         <td><%= link_to product.id, product_path(product) %></td>
         <td><%= product.title %></td>
         <td><%= product.price %></td>
-        <td><%= product.qty %></td>
+        <!-- <td><product.qty></td> -->
         <td><%= product.blurb %></td>
-        <td><%= product.description %></td>
-        <td><%= product.weight %></td>
-        <td><%= product.shipping_weight %></td>
-        <td><%= product.category %></td>
-        <td><%= product.subcategory %></td>
-        <td><%= product.images %></td>
-        <td><%= product.size %></td>
-        <td><%= product.options %></td>
+        <!-- <td><product.description></td> -->
+        <!-- <td><product.weight></td> -->
+        <!-- <td><product.shipping_weight></td> -->
+        <!-- <td><product.category></td> -->
+        <!-- <td><product.subcategory></td> -->
+        <td><%= image_tag product.image_url(:big_thumb).to_s %></td>
+        <!-- <td><product.images></td> -->
+        <!-- <td><product.size></td> -->
+        <!-- <td><product.options></td> -->
         <td><%=l product.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
