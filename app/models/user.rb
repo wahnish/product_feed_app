@@ -9,9 +9,12 @@ class User < ActiveRecord::Base
   # for creating a user w/products
   has_many :products
 
+  mount_uploader :image, ImageUploader
+
   # Setup accessible (or protected) attributes for your model
   attr_accessor :password, :password_confirmation, :current_password
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :current_password
+  attr_accessible :email, :password, :password_confirmation, :remember_me, 
+  :username, :current_password, :image
   # attr_accessible :title, :body
 
   validates_presence_of :username

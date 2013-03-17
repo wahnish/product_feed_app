@@ -7,12 +7,14 @@
 <table class="table table-striped">
   <thead>
      <tr>
+      <th><%= model_class.human_attribute_name(:image) %></th>
       <th><%= model_class.human_attribute_name(:username) %></th>
       <th><%= model_class.human_attribute_name(:email) %></th>
      </tr>
   </thead>
   <tbody>
     <tr>
+      <td><%= image_tag @user.image_url(:small_thumb).to_s %></td>
       <td><%= @user.username %></td>
       <td><%= @user.email %></td>
 
