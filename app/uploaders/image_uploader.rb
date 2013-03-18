@@ -37,14 +37,21 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
    version :big_thumb do
-     process :resize_to_limit => [640, 640]
+     process :resize_to_fill => [640, 640, gravity = 'Center']
    end
 
-   version :small_thumb do
-     process :resize_to_limit => [50, 50]
+   version :big_avatar do
+     process :resize_to_limit => [200, 200]
+   end
+
+   version :small_avatar do
+     process :resize_to_limit => [60, 60]
    end
   # 612x612 px is instagram homepg
-  # 640x640 px is thefancy homepg
+  # 640x640 px is fancy homepg
+  # 165x165 px is pinterest profile big avatar
+  # 200x200 px is fancy profile big avatar
+  # 60x60 px is fancy profile small avatar
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
