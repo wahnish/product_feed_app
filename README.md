@@ -27,18 +27,7 @@ Also figured out how to add user avatars into the homepage feed yesterday, which
 Continuing Work / Questions:
 ----------------------
 
-Still have lots to do. Need to validate users to limit their access - right now a member can go to another member's profile and edit their site. I think I can look up Devise docs for this?
-
-Also have been trying to attach links to images - specifically the person's avatar and image (avatar should link to user profile, product image should link to product page). StackOverflow suggested something like this:
-
-	<%= link_to -- do %>
- 		<%= image_tag product.user.image_url(:small_avatar, @user).to_s %>
-	<% end %>
-
-But when I add 'product.user.username, product.user' to the link_to, it blows up. 
-
-**Any thoughs?**
-
+Still have lots to do. Need to validate users to limit their access - right now a member can go to another member's profile and edit their site. I think I can look up Devise docs for this.
 
 Future Plans:
 ----------------------
