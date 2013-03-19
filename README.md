@@ -15,12 +15,12 @@ heroku logs:
 This error is after a heroku migrate & restart and after another error
 (relation "users" does not exist) occured. 
 
-**Any idea why it hates my mogrations? Is it because of my terrible early migration class names?**
+**Any idea why it hates my migrations? Is it because of my terrible early migration class names?**
 
 Accomplishments:
 ----------------------
 
-Pretty satisfied, as I got through most of my ITR Project Proposal list (minus the social features). Really glad I chose this type of project, since it replicates many major features that modern web development includes.
+Pretty satisfied as I got through most of my ITR Project Proposal list (minus the social features). Really glad I chose this type of project, since it replicates many major features that modern web development includes.
 
 Also figured out how to add user avatars into the homepage feed yesterday, which is awesome :)
 
