@@ -1,5 +1,5 @@
 ProductFeedApp::Application.routes.draw do
-  get "home/index"
+  #get "home/index"
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
                      controllers: {omniauth_callbacks: "omniauth_callbacks", :registrations => 'registrations'}
@@ -33,13 +33,13 @@ ProductFeedApp::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
-
-  resources :products do
-    collection do
-      get 'products'
-    end
-  end
-
+	#
+  #resources :products do
+  #  collection do
+  #    get 'products'
+  #  end
+  #end
+	#
   # Sample resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
